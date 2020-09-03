@@ -1,34 +1,45 @@
 ### Hi there👋
 
-## I am Sabit Studing Software Engineering at Shahjalal University of Science and Technology, Sylhet 
+## I am Sabit Studing Software Engineering at Shahjalal University of Science and Technology, Sylhet    
 
-## 🔭 I’m currently working on :
+
+
+
+
+
+
+
+
+ [![Sabit's github stats](https://github-readme-stats.vercel.app/api?username=SIB61&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+
+                                   
+ ###### 🔭 I’m currently working on :                               
   - a chatting Android App
   
-## 🌱 I’m currently learning :
+###### 🌱 I’m currently learning :                                                                     
   - Native Android Development with Java 
   - Algorithms 
   
-## 👯 I’m looking to collaborate with :
+###### 👯 I’m looking to collaborate with :
   - Other Android Developers 
 
-## 🥅 2020 Goals: 
+###### 🥅 2020 Goals: 
   - Learn Algorithms as more as possible. 
   - Developing Problem Solving Skill.
 
-## ⚡ Fun fact: 
+###### ⚡ Fun fact: 
   - Photography 
   
-## Languages:
+###### Languages:
   - c &* c++
   - java 
   - Python
-## Tools :
+###### Tools :
   - Android Studio 
   - VS Code 
   
 
-### Connect with me:
+## Connect with me:
 
 [<img align="left" alt="codeSTACKr | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
