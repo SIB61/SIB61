@@ -1,17 +1,10 @@
 ### Hi there👋
 
-## I am Sabit Studing Software Engineering at Shahjalal University of Science and Technology, Sylhet    
-
-
-
-
-
-
-
-
+## I am Sabit studing Software Engineering at Shahjalal University of Science and Technology, Sylhet.    
 
  [![Sabit's github stats](https://github-readme-stats.vercel.app/api?username=SIB61&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
+<br/>
                                    
  ###### 🔭 I’m currently working on :                               
   - a chatting Android App
@@ -37,7 +30,7 @@
 ###### Tools :
   - Android Studio 
   - VS Code 
-  
+ <br/>
 
 ## Connect with me:
 
