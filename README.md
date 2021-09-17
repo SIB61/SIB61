@@ -7,7 +7,7 @@
 <br/>
                                    
  ###### 🔭 I’m currently working on :                               
-  - a chatting Android App
+  - Android
   
 ###### 🌱 I’m currently learning :                                                                     
   - Native Android Development with Java 
@@ -16,16 +16,13 @@
 ###### 👯 I’m looking to collaborate with :
   - Other Android Developers 
 
-###### 🥅 2020 Goals: 
-  - Learn Algorithms as more as possible. 
-  - Developing Problem Solving Skill.
-
 ###### ⚡ Fun fact: 
   - Photography 
   
 ###### Languages:
   - c &* c++
   - java 
+  - kotlin
   - Python
 ###### Tools :
   - Android Studio 
@@ -40,10 +37,5 @@
 
 <br />
 
-
-
-
-[youtube]: https://youtube.com/Tech_Life_Solutions
-[instagram]: https://instagram.com/sabit__001
 [linkedin]: https://www.linkedin.com/in/md-sabit-islam-bhuiya-55a7601ab/
 
