@@ -8,6 +8,7 @@
                                    
  ###### 🔭 I’m currently working on :                               
   - Android
+  - Angular
   
 ###### 🌱 I’m currently learning :                                                                     
   - Native Android Development with Java 
@@ -23,7 +24,10 @@
   - c &* c++
   - java 
   - kotlin
-  - Python
+  - Typescript
+
+###### Frameworks
+  - Angular
 ###### Tools :
   - Android Studio 
   - VS Code 
