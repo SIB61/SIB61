@@ -1,6 +1,6 @@
 ### Hi there👋
 
-## studing Software Engineering at Shahjalal University of Science and Technology, Sylhet.    
+## Software Engineering at Shahjalal University of Science and Technology, Sylhet.    
 
  [![Sabit's github stats](https://github-readme-stats.vercel.app/api?username=SIB61&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
@@ -9,16 +9,7 @@
  ###### 🔭 I’m currently working on :                               
   - Android
   - Angular
-  
-###### 🌱 I’m currently learning :                                                                     
-  - Native Android Development with Java 
-  - Algorithms 
-  
-###### 👯 I’m looking to collaborate with :
-  - Other Android Developers 
-
-###### ⚡ Fun fact: 
-  - Photography 
+  - Ktor 
   
 ###### Languages:
   - c &* c++
@@ -26,11 +17,13 @@
   - kotlin
   - Typescript
 
-###### Frameworks
-  - Angular
 ###### Tools :
   - Android Studio 
+  - Intelij Idea
   - VS Code 
+
+###### Fun fact : 
+  - Photography
  <br/>
 
 ## Connect with me:
