@@ -10,6 +10,7 @@
   - Android
   - Angular
   - Ktor 
+  - NestJs
   
 ###### Languages:
   - c &* c++
