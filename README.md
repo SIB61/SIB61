@@ -6,13 +6,16 @@
 
 <br/>
                                    
- ###### 🔭 I’m currently working on :                               
+ ###### 🔭 Skills :                               
   - Android
   - Angular
   - NestJs
   - SpringBoot
+
+###### Interests :
+  - Competetive Programming
   
-###### Languages:
+###### Languages :
   - c &* c++
   - java 
   - kotlin
@@ -23,11 +26,15 @@
   - Intelij Idea
   - VS Code 
 
+###### Achievements :
+   - First runners up in "MIST INTER UNIVERSITY ICT INNOVATION FEST" organised by MIST
+   - Secured fourth place in "TECHSTORM 4" organised by Leading University
+
 ###### Fun fact : 
   - Photography
  <br/>
 
-## Connect with me:
+## Connect with me :
 [<img align="left" color="#FFFFFF" alt="codeSTACKr | LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 
 <br />
