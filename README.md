@@ -9,8 +9,8 @@
  ###### 🔭 I’m currently working on :                               
   - Android
   - Angular
-  - Ktor 
   - NestJs
+  - SpringBoot
   
 ###### Languages:
   - c &* c++
