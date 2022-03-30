@@ -20,6 +20,7 @@
   - java 
   - kotlin
   - Typescript
+  - Go
 
 ###### Tools :
   - Android Studio 
