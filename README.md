@@ -10,7 +10,7 @@
   - Android
   - Angular
   - NestJs
-  - SpringBoot
+  - ASP.NET
 
 ###### Interests :
   - Competetive Programming
@@ -21,6 +21,7 @@
   - kotlin
   - Typescript
   - Go
+  - c#
 
 ###### Tools :
   - Android Studio 
