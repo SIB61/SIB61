@@ -13,7 +13,7 @@
   - ASP.NET
 
 ###### Interests :
-  - Competetive Programming
+  - Problem Solving
   
 ###### Languages :
   - c &* c++
@@ -35,11 +35,13 @@
 ###### Fun fact : 
   - Photography
  <br/>
-
-## Connect with me :
+ 
+## Profiles :
 [<img align="left" color="#FFFFFF" alt="codeSTACKr | LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-
+<br />
+[<img align="left" color="#FFFFFF" alt="codeSTACKr | LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/stopstalk.svg" />][linkedin]
 <br />
 
 [linkedin]: https://www.linkedin.com/in/md-sabit-islam-bhuiya-55a7601ab/
+[Stopstalk]: https://www.stopstalk.com/user/profile/sib
 
