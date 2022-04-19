@@ -37,8 +37,8 @@
  <br/>
  
 ## Profiles :
-[<img align="left" color="#FFFFFF" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" color="#FFFFFF" alt="StopStalk" width="30px" src="https://github.com/SIB61/SIB61/blob/master/stopstalk.png" />][linkedin]
+[<img align="left" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="StopStalk" width="30px" src="https://github.com/SIB61/SIB61/blob/master/stopstalk.png" />][Stopstalk]
 <br />
 
 [linkedin]: https://www.linkedin.com/in/md-sabit-islam-bhuiya-55a7601ab/
