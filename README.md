@@ -4,7 +4,7 @@
 
  [![Sabit's github stats](https://github-readme-stats.vercel.app/api?username=SIB61&show_icons=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
-<br/><br/><br/>
+<br/>
                                    
  #### 🔭 Skills :                               
    <img align="Left" height="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" />
