@@ -39,7 +39,7 @@
    - First runners up in "MIST INTER UNIVERSITY ICT INNOVATION FEST" organised by MIST
    - Secured fourth place in "TECHSTORM 4" organised by Leading University
 
-##### Fun fact : 
+#### Fun fact : 
   - Photography
  <br/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SIB61&show_icons=true&theme=dark">
