@@ -35,9 +35,9 @@
 ###### Fun fact : 
   - Photography
  <br/>
- 
-<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=SIB61&show_icons=true&locale=en&layout=compact" alt="mynul436" />
- <br/>
+[![Most used languages](https://github-readme-stats.vercel.app/api/top-langs?username=SIB61&show_icons=true&theme=dark)]
+<br/>
+
 ## Profiles :
 [<img align="left" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
 [<img align="left" alt="StopStalk" width="30px" src="https://github.com/SIB61/SIB61/blob/master/stopstalk.png" />][Stopstalk]
