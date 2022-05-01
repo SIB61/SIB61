@@ -17,17 +17,21 @@
   
 ###### Languages :
   - c &* c++
-  - java 
+  - java
   - kotlin
+  - Html-Css
   - Typescript
   - Go
   - c#
 
 ###### Tools :
-  - Android Studio 
+  - Android Studio
   - Intelij Idea
-  - VS Code 
-
+  - VS Code
+  - Neovim
+###### Databases :
+  - Postgresql
+  - Mongodb
 ###### Achievements :
    - First runners up in "MIST INTER UNIVERSITY ICT INNOVATION FEST" organised by MIST
    - Secured fourth place in "TECHSTORM 4" organised by Leading University
