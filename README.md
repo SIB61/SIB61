@@ -43,7 +43,7 @@
 <br/>
 
 ## Profiles :
-[<img align="left" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />][linkedin]
 [<img align="left" alt="StopStalk" width="30px" src="https://github.com/SIB61/SIB61/blob/master/stopstalk.png" />][Stopstalk]
 <br />
 
