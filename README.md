@@ -7,9 +7,9 @@
 <br/>
                                    
  #### 🔭 Skills :                               
-  -- <img height="25px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" />  Android Development
-   <img height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
-   <img height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" />
+   <img align="Left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" />
+   <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
+   <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" />
   <!-- <img align="left" height="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" /> -->
 <br/><br/><br/>
   
