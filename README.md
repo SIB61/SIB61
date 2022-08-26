@@ -45,6 +45,8 @@
  <br/>
 <img src="https://github-readme-stats.vercel.app/api/top-langs?username=SIB61&show_icons=true&theme=dark">
 <br/>
+![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=SIB61&theme=1)
+<br/>
 
 ## Profiles :
 [<img align="left" alt="LinkedIn" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />][linkedin]
