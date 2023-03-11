@@ -4,7 +4,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sib61&label=Profile%20views&color=0e75b6&style=flat" alt="sib61" /> </p>
 
-- 👨‍💻 All of my projects are available at [https://sib61.github.io/Portfolio](https://github.com/SIB61/Portfolio)
+- 👨‍💻 All of my projects are available at [https://sib61.github.io/Portfolio](https://sib61.github.io/Portfolio/)
 
 - 💬 Ask me about **javascript, typescript, angular, react,sveltekit , nextjs, redux, nestjs**
 
