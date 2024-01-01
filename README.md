@@ -2,7 +2,11 @@
 # Hi 👋, I'm Md Sabit Islam Bhuiya
 
 # 💫 About Me:
-🔭 I’m currently working on SOFTWARE DEVELOPMENT<br>🌱 I’m currently learning NEXTSJS and REDUX<br>💬 Ask me about anything from my tech stack.<br>⚡ ANGULAR and NESTJS are my go-to stack for web development.<br>👯 I do android development with jetpack compose and kotlin.
+🔭 I’m currently working on Fullstack web development with NextJs<br>
+🌱 I’m currently learning Microservices<br>
+💬 Ask me about anything from Javascript.<br>
+⚡ ANGULAR, NEXTJS, NESTJS : these are my go-to stack for web development.<br>
+👯 I did some android development with Java, kotlin, Jetpack compose etc.
 
 
 ## 🌐 Socials:
