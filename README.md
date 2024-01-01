@@ -1,9 +1,9 @@
 
-# Hi 👋, I'm Md Sabit Islam Bhuiya, Full stack javascript/typescript developer. 
+# Hi 👋, I'm Md Sabit Islam Bhuiya, Full stack developer. 
 
 ## 💫 About Me:
 🔭 I’m currently working on Fullstack web development with NextJs<br>
-🌱 I’m currently learning Microservices<br>
+🌱 I’m currently learning Microservices and Machine Learning<br>
 💬 Ask me about anything from Javascript.<br>
 ⚡ NEXTJS, ANGULAR, NESTJS, MONGODB : these are my go-to stack for web development.<br>
 👯 I did some android development with Java, kotlin, Jetpack compose etc.
