@@ -2,10 +2,9 @@
 # Hi 👋, I'm Md Sabit Islam Bhuiya, Full stack developer. 
 
 ## 💫 About Me:
-🔭 I’m currently working on Fullstack web development with NextJs<br>
-🌱 I’m currently learning Microservices and Machine Learning<br>
-⚡ NEXTJS, ANGULAR, NESTJS, MONGODB : these are my go-to stack for web development.<br>
-👯 I did some android development with Java, kotlin, Jetpack compose etc.
+🔭 Full stack software engineer at Shellbeehaken Ltd.<br>
+🌱 Current stack: NodeJS, Express, NextJs, MongoDb, Redis, SocketIO, AWS.<br>
+⚡ Completed graduation in Software Engineering from Shahjalal University of Science and Technology, Sylhet, Bangladesh.<br>
 
 <br/>
 
