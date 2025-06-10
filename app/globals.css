@@ -4,10 +4,20 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: none; /* Hide default cursor */
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  cursor: none; /* Hide default cursor */
+}
+
+/* Hide cursor on all elements */
+* {
+  cursor: none !important;
 }
 
 @layer utilities {
@@ -52,6 +62,38 @@ body {
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  /* Custom Cursor Animations */
+  @keyframes cursor-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes cursor-ripple {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(6);
+      opacity: 0;
+    }
+  }
+
+  .cursor-pulse {
+    animation: cursor-pulse 2s ease-in-out infinite;
+  }
+
+  .cursor-ripple {
+    animation: cursor-ripple 0.6s ease-out forwards;
   }
 }
 

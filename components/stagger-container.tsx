@@ -1,19 +1,23 @@
-"use client"
+'use client';
 
-import type { ReactNode } from "react"
-import { useIntersectionObserver } from "../hooks/use-intersection-observer"
+import type { ReactNode } from 'react';
+import { useIntersectionObserver } from '../hooks/use-intersection-observer';
 
 interface StaggerContainerProps {
-  children: ReactNode
-  staggerDelay?: number
-  className?: string
+  children: ReactNode;
+  staggerDelay?: number;
+  className?: string;
 }
 
-export default function StaggerContainer({ children, staggerDelay = 100, className = "" }: StaggerContainerProps) {
+export default function StaggerContainer({
+  children,
+  staggerDelay = 100,
+  className = '',
+}: StaggerContainerProps) {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
-    rootMargin: "-50px",
-  })
+    rootMargin: '-50px',
+  });
 
   return (
     <div ref={ref} className={className}>
@@ -23,7 +27,9 @@ export default function StaggerContainer({ children, staggerDelay = 100, classNa
               key={index}
               style={{
                 opacity: isIntersecting ? 1 : 0,
-                transform: isIntersecting ? "translateY(0)" : "translateY(40px)",
+                transform: isIntersecting
+                  ? 'translateY(0)'
+                  : 'translateY(40px)',
                 transition: `all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * staggerDelay}ms`,
               }}
             >
@@ -32,5 +38,5 @@ export default function StaggerContainer({ children, staggerDelay = 100, classNa
           ))
         : children}
     </div>
-  )
+  );
 }

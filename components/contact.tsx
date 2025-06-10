@@ -1,62 +1,71 @@
-"use client"
-import { Mail, MapPin, Github, Instagram, Twitter, Linkedin } from "lucide-react"
-import RevealAnimation from "./reveal-animation"
-import GradientBackground from "./gradient-background"
-import { getPersonalInfo, getSocialLinks } from "../data/portfolio-data"
-import { FormEvent } from "react"
-import { useToast } from "./ui/use-toast"
-import { toast } from "sonner"
+'use client';
+import {
+  Mail,
+  MapPin,
+  Github,
+  Instagram,
+  Twitter,
+  Linkedin,
+} from 'lucide-react';
+import RevealAnimation from './reveal-animation';
+import GradientBackground from './gradient-background';
+import { getPersonalInfo, getSocialLinks } from '../data/portfolio-data';
+import { FormEvent } from 'react';
+import { useToast } from './ui/use-toast';
+import { toast } from 'sonner';
 
-
-
-const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdnS_BEBhLDnMaDHQCV9Rz0SLnorewc5AAB9jvZq05O1FxQzw/formResponse';
+const GOOGLE_FORM_ACTION_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdnS_BEBhLDnMaDHQCV9Rz0SLnorewc5AAB9jvZq05O1FxQzw/formResponse';
 const FORM_FIELDS = {
-name:"entry.1115770761",
-email:"entry.606546672",
-subject:"entry.222261746",
-description:"entry.141411445"
+  name: 'entry.1115770761',
+  email: 'entry.606546672',
+  subject: 'entry.222261746',
+  description: 'entry.141411445',
 };
-
-
 
 export default function Contact() {
-  const personalInfo = getPersonalInfo()
-  const socialLinks = getSocialLinks()
+  const personalInfo = getPersonalInfo();
+  const socialLinks = getSocialLinks();
 
-const handleSubmit = (e:FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
 
-  console.log(e)
-  const form = e.target as HTMLFormElement
-  const formData = new FormData(form)
+    console.log(e);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
 
-  try {
-    fetch(GOOGLE_FORM_ACTION_URL, {
-      method: 'POST',
-      mode: 'no-cors', // must use 'no-cors' for Google Forms
-      body: formData,
-    }).then(res=>{
-      form.reset()
-      toast.success(`Thanks ${formData.get(FORM_FIELDS.name)}. I will get back to you ASAP`,{richColors:true})
-    });
-  } catch (err) {
-    console.error('Failed to send form', err);
-  }
-};
+    try {
+      fetch(GOOGLE_FORM_ACTION_URL, {
+        method: 'POST',
+        mode: 'no-cors', // must use 'no-cors' for Google Forms
+        body: formData,
+      }).then((res) => {
+        form.reset();
+        toast.success(
+          `Thanks ${formData.get(FORM_FIELDS.name)}. I will get back to you ASAP`,
+          { richColors: true }
+        );
+      });
+    } catch (err) {
+      console.error('Failed to send form', err);
+    }
+  };
 
   const iconMap = {
     github: Github,
     mail: Mail,
     instagram: Instagram,
     twitter: Linkedin,
-  }
+  };
 
   return (
     <section id="contact" className="py-20 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <RevealAnimation direction="up">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Get In Touch
+            </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
           </div>
         </RevealAnimation>
@@ -64,10 +73,13 @@ const handleSubmit = (e:FormEvent) => {
         <div className="grid md:grid-cols-2 gap-12">
           <RevealAnimation direction="left" delay={200}>
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Let's Work Together</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Let's Work Together
+              </h3>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                I'm always interested in new opportunities and exciting projects. Whether you have a question or just
-                want to say hi, I'll try my best to get back to you!
+                I'm always interested in new opportunities and exciting
+                projects. Whether you have a question or just want to say hi,
+                I'll try my best to get back to you!
               </p>
 
               <div className="space-y-6">
@@ -102,7 +114,8 @@ const handleSubmit = (e:FormEvent) => {
                 <h4 className="text-white font-medium mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => {
-                    const IconComponent = iconMap[social.icon as keyof typeof iconMap]
+                    const IconComponent =
+                      iconMap[social.icon as keyof typeof iconMap];
                     return (
                       <a
                         key={index}
@@ -111,7 +124,7 @@ const handleSubmit = (e:FormEvent) => {
                       >
                         <IconComponent className="w-5 h-5 text-gray-300 hover:text-white transition-colors duration-200" />
                       </a>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -119,10 +132,16 @@ const handleSubmit = (e:FormEvent) => {
           </RevealAnimation>
 
           <RevealAnimation direction="right" delay={400}>
-            <GradientBackground variant="card" className="p-8 rounded-lg border border-gray-700">
+            <GradientBackground
+              variant="card"
+              className="p-8 rounded-lg border border-gray-700"
+            >
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Name
                   </label>
                   <input
@@ -135,7 +154,10 @@ const handleSubmit = (e:FormEvent) => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -148,7 +170,10 @@ const handleSubmit = (e:FormEvent) => {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -161,7 +186,10 @@ const handleSubmit = (e:FormEvent) => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -186,10 +214,12 @@ const handleSubmit = (e:FormEvent) => {
 
         <RevealAnimation direction="up" delay={600}>
           <div className="mt-16 pt-8 border-t border-gray-800 text-center">
-            <p className="text-gray-400">© 2024 {personalInfo.name}. All rights reserved.</p>
+            <p className="text-gray-400">
+              © 2024 {personalInfo.name}. All rights reserved.
+            </p>
           </div>
         </RevealAnimation>
       </div>
     </section>
-  )
+  );
 }

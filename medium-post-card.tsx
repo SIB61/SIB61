@@ -1,30 +1,29 @@
-"use client"
+'use client';
 
-import { Calendar, User, ExternalLink } from "lucide-react"
+import { Calendar, User, ExternalLink } from 'lucide-react';
 
 type MediumPost = {
-  title: string
-  link: string
-  pubDate: string
-  author: string
-  thumbnail: string
-  description: string
-  categories: string[]
-}
-
+  title: string;
+  link: string;
+  pubDate: string;
+  author: string;
+  thumbnail: string;
+  description: string;
+  categories: string[];
+};
 
 interface MediumPostCardProps {
-  post: MediumPost
+  post: MediumPost;
 }
 
 export default function MediumPostCard({ post }: MediumPostCardProps) {
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })
-  }
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    });
+  };
 
   return (
     <div className="bg-gray-900 min-h-screen p-6">
@@ -64,7 +63,9 @@ export default function MediumPostCard({ post }: MediumPostCardProps) {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 text-sm line-clamp-3 leading-relaxed">{post.description}</p>
+              <p className="text-gray-300 text-sm line-clamp-3 leading-relaxed">
+                {post.description}
+              </p>
             </div>
           </div>
 
@@ -88,55 +89,81 @@ export default function MediumPostCard({ post }: MediumPostCardProps) {
           </div>
 
           {/* Clickable overlay */}
-          <a href={post.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
+          <a
+            href={post.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-10"
+          >
             <span className="sr-only">Read {post.title}</span>
           </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Dummy data
 const dummyPosts: MediumPost[] = [
   {
-    title: "Building Scalable React Applications with Modern Architecture Patterns",
-    link: "https://medium.com/@johndeveloper/building-scalable-react-apps",
-    pubDate: "2024-01-15T10:30:00Z",
-    author: "John Developer",
-    thumbnail: "",
+    title:
+      'Building Scalable React Applications with Modern Architecture Patterns',
+    link: 'https://medium.com/@johndeveloper/building-scalable-react-apps',
+    pubDate: '2024-01-15T10:30:00Z',
+    author: 'John Developer',
+    thumbnail: '',
     description:
-      "Explore advanced patterns and best practices for building maintainable React applications that scale. Learn about component composition, state management strategies, and performance optimization techniques that will take your React skills to the next level.",
-    categories: ["React", "JavaScript", "Web Development", "Architecture", "Frontend"],
+      'Explore advanced patterns and best practices for building maintainable React applications that scale. Learn about component composition, state management strategies, and performance optimization techniques that will take your React skills to the next level.',
+    categories: [
+      'React',
+      'JavaScript',
+      'Web Development',
+      'Architecture',
+      'Frontend',
+    ],
   },
   {
-    title: "The Future of AI in Web Development: What Every Developer Should Know",
-    link: "https://medium.com/@sarahtech/ai-web-development-future",
-    pubDate: "2024-01-10T14:20:00Z",
-    author: "Sarah Tech",
-    thumbnail: "",
+    title:
+      'The Future of AI in Web Development: What Every Developer Should Know',
+    link: 'https://medium.com/@sarahtech/ai-web-development-future',
+    pubDate: '2024-01-10T14:20:00Z',
+    author: 'Sarah Tech',
+    thumbnail: '',
     description:
-      "Artificial Intelligence is revolutionizing how we build web applications. From automated code generation to intelligent user interfaces, discover the tools and techniques that are shaping the future of web development.",
-    categories: ["AI", "Machine Learning", "Web Development", "Future Tech", "Innovation"],
+      'Artificial Intelligence is revolutionizing how we build web applications. From automated code generation to intelligent user interfaces, discover the tools and techniques that are shaping the future of web development.',
+    categories: [
+      'AI',
+      'Machine Learning',
+      'Web Development',
+      'Future Tech',
+      'Innovation',
+    ],
   },
   {
-    title: "Mastering TypeScript: Advanced Types and Patterns for Better Code",
-    link: "https://medium.com/@mikecoder/mastering-typescript-advanced",
-    pubDate: "2024-01-05T09:15:00Z",
-    author: "Mike Coder",
-    thumbnail: "",
+    title: 'Mastering TypeScript: Advanced Types and Patterns for Better Code',
+    link: 'https://medium.com/@mikecoder/mastering-typescript-advanced',
+    pubDate: '2024-01-05T09:15:00Z',
+    author: 'Mike Coder',
+    thumbnail: '',
     description:
       "Deep dive into TypeScript's advanced type system. Learn about conditional types, mapped types, template literal types, and how to leverage them to write more robust and maintainable code.",
-    categories: ["TypeScript", "JavaScript", "Programming", "Software Engineering"],
+    categories: [
+      'TypeScript',
+      'JavaScript',
+      'Programming',
+      'Software Engineering',
+    ],
   },
-]
+];
 
 // Example usage with multiple cards
 export function MediumPostCardDemo() {
   return (
     <div className="bg-gray-900 min-h-screen p-6">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-white mb-8 text-center">My Articles</h1>
+        <h1 className="text-3xl font-bold text-white mb-8 text-center">
+          My Articles
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dummyPosts.map((post, index) => (
             <div key={index} className="max-w-md mx-auto w-full">
@@ -144,7 +171,9 @@ export function MediumPostCardDemo() {
                 {/* Thumbnail */}
                 <div className="relative overflow-hidden">
                   <div className="w-full h-48 bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-                    <div className="text-white text-6xl font-bold opacity-20">📝</div>
+                    <div className="text-white text-6xl font-bold opacity-20">
+                      📝
+                    </div>
                   </div>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-200" />
                 </div>
@@ -175,7 +204,9 @@ export function MediumPostCardDemo() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 text-sm line-clamp-3 leading-relaxed">{post.description}</p>
+                    <p className="text-gray-300 text-sm line-clamp-3 leading-relaxed">
+                      {post.description}
+                    </p>
                   </div>
                 </div>
 
@@ -190,10 +221,10 @@ export function MediumPostCardDemo() {
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
                         <span>
-                          {new Date(post.pubDate).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
+                          {new Date(post.pubDate).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
                           })}
                         </span>
                       </div>
@@ -205,7 +236,12 @@ export function MediumPostCardDemo() {
                 </div>
 
                 {/* Clickable overlay */}
-                <a href={post.link} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10">
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10"
+                >
                   <span className="sr-only">Read {post.title}</span>
                 </a>
               </div>
@@ -214,5 +250,5 @@ export function MediumPostCardDemo() {
         </div>
       </div>
     </div>
-  )
+  );
 }

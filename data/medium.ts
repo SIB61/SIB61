@@ -1,5 +1,3 @@
-
-
 import { JSDOM } from 'jsdom';
 import { Article } from './portfolio-data';
 
@@ -8,7 +6,6 @@ function extractFirstImageSrc(html: string): string | null {
   const img = dom.window.document.querySelector('img');
   return img ? img.src : null;
 }
-
 
 function extractDescription(html: string): string {
   const dom = new JSDOM(html);
@@ -39,10 +36,9 @@ type MediumFeed = {
   items: MediumPost[];
 };
 
-
 export async function fetchMediumPosts(username: string): Promise<Article[]> {
   const url = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`;
-  
+
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to fetch Medium posts: ${response.statusText}`);
@@ -53,14 +49,15 @@ export async function fetchMediumPosts(username: string): Promise<Article[]> {
     throw new Error('Failed to parse Medium RSS feed');
   }
 
-  const postsWithThumbnails = data.items.map((post,i) => {
+  const postsWithThumbnails = data.items.map((post, i) => {
     let thumbnail = post.thumbnail;
     if (!thumbnail || thumbnail.trim() === '') {
       const extracted = extractFirstImageSrc(post.description);
       thumbnail = extracted || '';
     }
-    const description = post.description && extractDescription(post.description)
-    return { ...post, thumbnail, description,id: post.title };
+    const description =
+      post.description && extractDescription(post.description);
+    return { ...post, thumbnail, description, id: post.title };
   });
 
   return postsWithThumbnails;

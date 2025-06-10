@@ -1,53 +1,69 @@
-"use client"
+'use client';
 
-import { Github, Mail, Instagram, Twitter, Download, ArrowDown, Linkedin } from "lucide-react"
-import { useState, useEffect } from "react"
-import RevealAnimation from "./reveal-animation"
-import GradientBackground from "./gradient-background"
-import { getPersonalInfo, getSocialLinks } from "../data/portfolio-data"
+import {
+  Github,
+  Mail,
+  Instagram,
+  Twitter,
+  Download,
+  ArrowDown,
+  Linkedin,
+} from 'lucide-react';
+import { useState, useEffect } from 'react';
+import RevealAnimation from './reveal-animation';
+import GradientBackground from './gradient-background';
+import { getPersonalInfo, getSocialLinks } from '../data/portfolio-data';
 
 export default function Hero() {
-  const personalInfo = getPersonalInfo()
-  const socialLinks = getSocialLinks()
-  const [currentText, setCurrentText] = useState("")
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
+  const personalInfo = getPersonalInfo();
+  const socialLinks = getSocialLinks();
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = ["Software Engineer", "Design Pattern Enthusiast", "Fullstack Developer", "Problem Solver"]
+  const texts = [
+    'Software Engineer',
+    'Design Pattern Enthusiast',
+    'Fullstack Developer',
+    'Problem Solver',
+  ];
 
   useEffect(() => {
     const timeout = setTimeout(
       () => {
-        const current = texts[currentIndex]
+        const current = texts[currentIndex];
 
         if (isDeleting) {
-          setCurrentText(current.substring(0, currentText.length - 1))
+          setCurrentText(current.substring(0, currentText.length - 1));
         } else {
-          setCurrentText(current.substring(0, currentText.length + 1))
+          setCurrentText(current.substring(0, currentText.length + 1));
         }
 
         if (!isDeleting && currentText === current) {
-          setTimeout(() => setIsDeleting(true), 2000)
-        } else if (isDeleting && currentText === "") {
-          setIsDeleting(false)
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length)
+          setTimeout(() => setIsDeleting(true), 2000);
+        } else if (isDeleting && currentText === '') {
+          setIsDeleting(false);
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
         }
       },
-      isDeleting ? 50 : 100,
-    )
+      isDeleting ? 50 : 100
+    );
 
-    return () => clearTimeout(timeout)
-  }, [currentText, isDeleting, currentIndex, texts])
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, currentIndex, texts]);
 
   const iconMap = {
     github: Github,
     mail: Mail,
     instagram: Instagram,
     twitter: Linkedin,
-  }
+  };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-24 relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center px-4 pt-24 relative overflow-hidden"
+    >
       <GradientBackground variant="hero" className="absolute inset-0" />
 
       {/* Enhanced animated background elements */}
@@ -80,7 +96,9 @@ export default function Hero() {
           <div className="mb-6">
             <div className="inline-flex items-center px-4 py-2 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700 mb-4">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-              <span className="text-gray-300 text-sm">Available for new opportunities</span>
+              <span className="text-gray-300 text-sm">
+                Available for new opportunities
+              </span>
             </div>
           </div>
         </RevealAnimation>
@@ -101,33 +119,40 @@ export default function Hero() {
               <span className="animate-pulse text-blue-400 ml-1">|</span>
             </div>
             <div className="flex flex-wrap justify-center gap-3 mb-6">
-              {["Design Patterns", "Clean Architecture", "SOLID Principles", "Node.js", "Next.js"].map(
-                (keyword, index) => (
-                  <span
-                    key={keyword}
-                    className="px-3 py-1 bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-gray-600 hover:border-blue-500/50 transition-all duration-300"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    {keyword}
-                  </span>
-                ),
-              )}
+              {[
+                'Design Patterns',
+                'Clean Architecture',
+                'SOLID Principles',
+                'Node.js',
+                'Next.js',
+              ].map((keyword, index) => (
+                <span
+                  key={keyword}
+                  className="px-3 py-1 bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm rounded-full text-sm text-gray-300 border border-gray-600 hover:border-blue-500/50 transition-all duration-300"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {keyword}
+                </span>
+              ))}
             </div>
           </div>
         </RevealAnimation>
 
         <RevealAnimation direction="up" delay={1000}>
           <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Passionate about building scalable web applications with clean architecture and design patterns. As a design
-            pattern enthusiast, I create exceptional user experiences while maintaining robust, maintainable codebases.
-            Currently working as a Software Engineer at JB Connect LTD.
+            Passionate about building scalable web applications with clean
+            architecture and design patterns. As a design pattern enthusiast, I
+            create exceptional user experiences while maintaining robust,
+            maintainable codebases. Currently working as a Software Engineer at
+            JB Connect LTD.
           </p>
         </RevealAnimation>
 
         <RevealAnimation direction="up" delay={1200}>
           <div className="flex justify-center space-x-4 mb-12">
             {socialLinks.map((social, index) => {
-              const IconComponent = iconMap[social.icon as keyof typeof iconMap]
+              const IconComponent =
+                iconMap[social.icon as keyof typeof iconMap];
               return (
                 <a
                   key={index}
@@ -141,7 +166,7 @@ export default function Hero() {
                   <IconComponent className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-200" />
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
                 </a>
-              )
+              );
             })}
           </div>
         </RevealAnimation>
@@ -149,7 +174,11 @@ export default function Hero() {
         <RevealAnimation direction="up" delay={1400}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById('contact')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center">
@@ -160,7 +189,11 @@ export default function Hero() {
             </button>
 
             <button
-              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() =>
+                document
+                  .getElementById('projects')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="group px-8 py-4 border-2 border-gray-600 text-gray-300 rounded-xl hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300 font-medium backdrop-blur-sm hover:scale-105 relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center">
@@ -169,12 +202,17 @@ export default function Hero() {
               </span>
             </button>
 
-            <button className="group px-8 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-xl hover:border-gray-600 hover:text-white hover:bg-gray-700/50 transition-all duration-300 font-medium hover:scale-105">
+            <a
+              href="https://www.dropbox.com/scl/fi/n1kcb7ad9nvi3icfj6tq8/Md-Sabit-Islam-Bhuiya-s-Resume.pdf?rlkey=8naozpv7un7awp807wnd5of5o&st=hgv8voo1&dl=1"
+              target="_blank"
+              rel="noopener"
+              className="group px-8 py-4 bg-gray-800/50 backdrop-blur-sm border border-gray-700 text-gray-300 rounded-xl hover:border-gray-600 hover:text-white hover:bg-gray-700/50 transition-all duration-300 font-medium hover:scale-105"
+            >
               <span className="flex items-center justify-center">
                 Download CV
                 <Download className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-200" />
               </span>
-            </button>
+            </a>
           </div>
         </RevealAnimation>
 
@@ -191,5 +229,5 @@ export default function Hero() {
         </RevealAnimation>
       </div>
     </section>
-  )
+  );
 }

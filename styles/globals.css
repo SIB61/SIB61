@@ -6,6 +6,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
