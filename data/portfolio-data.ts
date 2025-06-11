@@ -64,7 +64,7 @@ export function getPersonalInfo(): PersonalInfo {
     image: '',
     email: 'sib.sustswe@gmail.com',
     location: 'Bangladesh',
-    experiencedFrom: '2022-6-1',
+    experiencedFrom: '2023-1-1',
     keywords: [
       'Design Patterns',
       'Clean Architecture',
