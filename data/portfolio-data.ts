@@ -61,7 +61,7 @@ export function getPersonalInfo(): PersonalInfo {
       'Software Engineer with 2+ years of experience in NodeJs and NextJs ecosystem',
     description:
       'Passionate about building scalable web applications with clean architecture and design patterns. As a design pattern enthusiast, I create exceptional user experiences while maintaining robust, maintainable codebases. Currently working as a Software Engineer at JB Connect LTD.',
-    image: '',
+    image: '/avatar.jpg',
     email: 'sib.sustswe@gmail.com',
     location: 'Bangladesh',
     experiencedFrom: '2023-1-1',

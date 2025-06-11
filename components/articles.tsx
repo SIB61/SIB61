@@ -86,13 +86,13 @@ export default function Articles({ allArticles }: { allArticles: Article[] }) {
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-2xl opacity-20 group-hover:opacity-40 blur transition-opacity duration-300"></div>
               </Link>
-              <p className="text-gray-400 text-sm mt-4 flex items-center justify-center">
+              <div className="text-gray-400 text-sm mt-4 flex items-center justify-center">
                 <span>
                   Showing {displayedArticles.length} of {allArticles.length}{' '}
                   articles
                 </span>
                 <div className="w-2 h-2 bg-purple-400 rounded-full ml-2 animate-pulse"></div>
-              </p>
+              </div>
             </div>
           </RevealAnimation>
         )}

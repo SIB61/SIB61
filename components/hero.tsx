@@ -82,11 +82,12 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <RevealAnimation direction="fade" delay={200}>
           <div className="mb-8">
-            <div className="relative w-36 h-36 mx-auto mb-6">
+            <div className="relative w-36 h-36 lg:h-40 lg:w-40 mx-auto mb-6">
               {/* Animated ring around avatar */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-full animate-spin-slow opacity-75"></div>
               <div className="absolute inset-2 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50">
-                <span className="text-5xl font-bold text-white">SB</span>
+               <img src={personalInfo.image} alt="" className='w-full rounded-full h-full object-cover object-top' />
+                {/* <span className="text-5xl font-bold text-white">SB</span> */}
               </div>
             </div>
           </div>
