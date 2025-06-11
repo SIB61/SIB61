@@ -8,10 +8,7 @@ html {
 }
 
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   cursor: none; /* Hide default cursor */
 }
 
@@ -65,31 +62,15 @@ body {
   }
 
   /* Custom Cursor Animations */
-  @keyframes cursor-pulse {
-    0%,
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 0.8;
-    }
-  }
-
   @keyframes cursor-ripple {
     0% {
       transform: scale(1);
       opacity: 1;
     }
     100% {
-      transform: scale(6);
+      transform: scale(8);
       opacity: 0;
     }
-  }
-
-  .cursor-pulse {
-    animation: cursor-pulse 2s ease-in-out infinite;
   }
 
   .cursor-ripple {
@@ -116,3 +97,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
