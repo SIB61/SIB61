@@ -202,7 +202,7 @@ export default function CustomCursor() {
       {/* Hover Glow Effect */}
       {isHovering && (
         <div
-          className="fixed top-0 left-0 pointer-events-none z-[9995] transition-all duration-300"
+          className="fixed custom-cursor top-0 left-0 pointer-events-none z-[9995] transition-all duration-300"
           style={{
             transform: `translate(${mousePosition.x - 20}px, ${mousePosition.y - 20}px)`,
           }}
