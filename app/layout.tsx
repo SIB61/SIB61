@@ -12,10 +12,13 @@ export const metadata: Metadata = {
     'Software Engineer',
     'Web Developer',
     'Backend Developer',
+    'Fullstack Developer',
+    'Developer portfolio',
     'Portfolio',
     'Next.js',
     'JavaScript',
     'Node.js',
+    'React'
   ],
 
   openGraph: {
@@ -25,6 +28,15 @@ export const metadata: Metadata = {
     siteName: 'Sabit Islam Bhuiya',
     locale: 'en_US',
     type: 'website',
+    url: 'https://sabit-islam-bhuiya.vercel.app',
+    images: [
+      {
+        url: 'https://sabit-islam-bhuiya.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sabit Islam Bhuiya',
+      },
+    ],
   },
 };
 
