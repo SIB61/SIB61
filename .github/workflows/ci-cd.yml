@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -15,14 +15,15 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel
 
-      - name: Deploy to Vercel
+      - name: Setup Vercel project settings
         run: |
-          vercel --prod \
-            --token=$VERCEL_TOKEN \
-            --confirm \
-            --scope $VERCEL_ORG_ID \
-            --project $VERCEL_PROJECT_ID
+          vercel pull --yes --environment=production \
+            --token=$VERCEL_TOKEN
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Deploy to Vercel
+        run: |
+          vercel --prod --yes --token=$VERCEL_TOKEN
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
