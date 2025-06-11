@@ -1,5 +1,6 @@
 "use client"
 
+import { useIsMobile } from "@/hooks/use-mobile"
 import { useEffect, useState, useRef } from "react"
 
 export default function CustomCursor() {
@@ -136,7 +137,7 @@ export default function CustomCursor() {
     <>
       {/* Trailing Outer Circle - Slower following */}
       <div
-        className="fixed top-0 left-0 pointer-events-none z-[9998] transition-all duration-300 ease-out"
+        className="fixed top-0 left-0 custom-cursor pointer-events-none z-[9998] transition-all duration-300 ease-out"
         style={{
           transform: `translate(${trailingPosition.x - 16}px, ${trailingPosition.y - 16}px) ${
             isHovering ? "scale(1.5)" : "scale(1)"
@@ -152,7 +153,7 @@ export default function CustomCursor() {
 
       {/* Main Cursor Dot - Exact mouse position */}
       <div
-        className="fixed top-0 left-0 pointer-events-none z-[9999] transition-all duration-100 ease-out"
+        className="fixed top-0 left-0 custom-cursor pointer-events-none z-[9999] transition-all duration-100 ease-out"
         style={{
           transform: `translate(${mousePosition.x - 6}px, ${mousePosition.y - 6}px) ${
             isClicking ? "scale(1.5)" : "scale(1)"
@@ -168,7 +169,7 @@ export default function CustomCursor() {
 
       {/* Inner Ring - Medium following speed */}
       <div
-        className="fixed top-0 left-0 pointer-events-none z-[9997] transition-all duration-200 ease-out"
+        className="fixed custom-cursor top-0 left-0 pointer-events-none z-[9997] transition-all duration-200 ease-out"
         style={{
           transform: `translate(${
             mousePosition.x + (trailingPosition.x - mousePosition.x) * 0.5 - 12
