@@ -26,11 +26,11 @@ const FORM_FIELDS = {
 export default function Contact() {
   const personalInfo = getPersonalInfo();
   const socialLinks = getSocialLinks();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
 
     console.log(e);
     const form = e.target as HTMLFormElement;
@@ -41,21 +41,22 @@ export default function Contact() {
         method: 'POST',
         mode: 'no-cors', // must use 'no-cors' for Google Forms
         body: formData,
-      }).then((res) => {
-        form.reset();
-        setIsLoading(false)
-        toast.success(
-          `Thanks ${formData.get(FORM_FIELDS.name)}. I will get back to you ASAP`,
-          { richColors: true }
-        );
-      }).catch(e=>{
-        throw e
-      });
+      })
+        .then((res) => {
+          form.reset();
+          setIsLoading(false);
+          toast.success(
+            `Thanks ${formData.get(FORM_FIELDS.name)}. I will get back to you ASAP`,
+            { richColors: true }
+          );
+        })
+        .catch((e) => {
+          throw e;
+        });
     } catch (err) {
       console.error('Failed to send form', err);
-      setIsLoading(false)
+      setIsLoading(false);
     }
-
   };
 
   const iconMap = {

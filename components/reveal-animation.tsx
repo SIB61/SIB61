@@ -24,9 +24,9 @@ export default function RevealAnimation({
     rootMargin: '-50px',
   });
 
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
 
-  const fromOutside = isMobile && (direction == 'left' || direction == 'right')
+  const fromOutside = isMobile && (direction == 'left' || direction == 'right');
 
   const getInitialTransform = () => {
     switch (direction) {
@@ -46,17 +46,19 @@ export default function RevealAnimation({
   };
 
   if (!fromOutside) {
-    return <div
-      ref={ref}
-      className={className}
-      style={{
-        opacity: isIntersecting ? 1 : 0,
-        transform: isIntersecting ? 'translate(0)' : getInitialTransform(),
-        transition: `all ${duration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}ms`,
-      }}
-    >
-      {children}
-    </div>
+    return (
+      <div
+        ref={ref}
+        className={className}
+        style={{
+          opacity: isIntersecting ? 1 : 0,
+          transform: isIntersecting ? 'translate(0)' : getInitialTransform(),
+          transition: `all ${duration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}ms`,
+        }}
+      >
+        {children}
+      </div>
+    );
   }
 
   return (

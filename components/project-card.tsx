@@ -5,7 +5,6 @@ import GradientBackground from './gradient-background';
 import TechTag from './tech-tag';
 import { Project } from '@/data/portfolio-data';
 
-
 interface ProjectCardProps {
   project: Project;
   variant?: 'default' | 'compact';

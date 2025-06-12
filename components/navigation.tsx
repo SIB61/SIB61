@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const router = useRouter()
+  const router = useRouter();
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -38,7 +38,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    router.push('/#'+sectionId)
+    router.push('/#' + sectionId);
     setIsOpen(false);
   };
 

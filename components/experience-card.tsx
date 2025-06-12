@@ -26,7 +26,6 @@ export default function ExperienceCard({
   index,
   isEven,
 }: ExperienceCardProps) {
-
   const formatDate = (dateString: string) => {
     if (!dateString) return 'Present';
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -118,7 +117,7 @@ export default function ExperienceCard({
               </div>
 
               {/* Description */}
-              <CardDescription description={experience.description}/>
+              <CardDescription description={experience.description} />
 
               {/* Technologies */}
               <div className="flex flex-wrap gap-2">
@@ -131,7 +130,6 @@ export default function ExperienceCard({
                   />
                 ))}
               </div>
-
             </div>
 
             {/* Hover Effect */}

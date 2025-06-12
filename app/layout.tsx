@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Next.js',
     'JavaScript',
     'Node.js',
-    'React'
+    'React',
   ],
   openGraph: {
     title: 'Md. Sabit Islam Bhuiya | Software Engineer',

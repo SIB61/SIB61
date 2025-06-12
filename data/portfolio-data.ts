@@ -20,7 +20,7 @@ export interface Project {
   description: string;
   technologies: string[];
   featured?: boolean;
-  timeline: string
+  timeline: string;
 }
 
 export interface Article {
@@ -214,7 +214,8 @@ export function getProjects(): Project[] {
       title: 'Kriyakarak for Shellbeehaken Ltd.',
       cover: '/kriyakarak.jpg',
       link: 'https://www.kriyakarak.com/',
-      description: "KriyaKarak is a Bangladesh-based creative networking and hiring platform launched in 2024, designed for artists, designers, photographers, and service providers. It helps professionals showcase portfolios, manage bookings, and connect with clients across various categories like beauty, events, art, and consulting. Features include low commissions, verified profiles, NFC business cards, secure transactions, and global reach. Available on web, Android, and iOS.",
+      description:
+        'KriyaKarak is a Bangladesh-based creative networking and hiring platform launched in 2024, designed for artists, designers, photographers, and service providers. It helps professionals showcase portfolios, manage bookings, and connect with clients across various categories like beauty, events, art, and consulting. Features include low commissions, verified profiles, NFC business cards, secure transactions, and global reach. Available on web, Android, and iOS.',
       technologies: [
         'Next.js',
         'Express',
@@ -225,14 +226,15 @@ export function getProjects(): Project[] {
         'AWS',
       ],
       featured: true,
-      timeline: '2024 - 2025'
+      timeline: '2024 - 2025',
     },
     {
       id: 'Mapage',
       title: 'Mapage for Shellbeehaken Ltd.',
       cover: '/mapage.jpg',
       link: 'https://introduction.mapage.net/',
-      description: "Mapage is a web and mobile platform for beauty professionals, especially hairdressers, to create sleek, personalized websites in minutes. It offers templates co-designed with influencer stylists, Instagram integration, NFC digital business cards, online reservations, payments, and even e-commerce features. Stylists can manage schedules, clients, and services efficiently. Ideal for both individuals and salon teams, Mapage helps boost branding, streamline bookings, and enhance customer engagement—all from one easy-to-use platform.",
+      description:
+        'Mapage is a web and mobile platform for beauty professionals, especially hairdressers, to create sleek, personalized websites in minutes. It offers templates co-designed with influencer stylists, Instagram integration, NFC digital business cards, online reservations, payments, and even e-commerce features. Stylists can manage schedules, clients, and services efficiently. Ideal for both individuals and salon teams, Mapage helps boost branding, streamline bookings, and enhance customer engagement—all from one easy-to-use platform.',
       technologies: [
         'Next.js',
         'Express',
@@ -243,22 +245,18 @@ export function getProjects(): Project[] {
         'Tailwind CSS',
       ],
       featured: true,
-      timeline: '2023 - 2024'
+      timeline: '2023 - 2024',
     },
     {
       id: 'Honnemir',
       title: 'Honnemir for Shellbeehaken Ltd.',
       cover: '/honnemir.jpg',
       link: 'https://shellbeehaken.com/portfolio/5',
-      description: "The Honnemir User app, developed by ShellBeeHaken for Fujitsu, is a mobile platform designed to facilitate user participation in various surveys. Users can respond to a wide range of survey questions and enhance their responses by uploading videos and images. This interactive approach allows for more detailed and expressive feedback. The surveys are commissioned by different companies seeking to gather valuable insights and data. Through the Honnemir app, these companies can collect comprehensive responses that provide a deeper understanding of user opinions and behaviors .",
-      technologies: [
-        'Next.js',
-        'AWS Amplify',
-        'React',
-        'Tailwind CSS',
-      ],
+      description:
+        'The Honnemir User app, developed by ShellBeeHaken for Fujitsu, is a mobile platform designed to facilitate user participation in various surveys. Users can respond to a wide range of survey questions and enhance their responses by uploading videos and images. This interactive approach allows for more detailed and expressive feedback. The surveys are commissioned by different companies seeking to gather valuable insights and data. Through the Honnemir app, these companies can collect comprehensive responses that provide a deeper understanding of user opinions and behaviors .',
+      technologies: ['Next.js', 'AWS Amplify', 'React', 'Tailwind CSS'],
       featured: true,
-      timeline: '2023'
+      timeline: '2023',
     },
     {
       id: 'portfolio',
@@ -268,14 +266,9 @@ export function getProjects(): Project[] {
       githubLink: 'https://github.com/SIB61/Twitter-Clone',
       description:
         'A beautiful portfolio website to showcase my projects, articles, expericences and others in one place.',
-      technologies: [
-        'Next.js',
-        'React',
-        'Tailwind CSS',
-        'Shadcn'
-      ],
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Shadcn'],
       featured: true,
-      timeline: '2025 - Present'
+      timeline: '2025 - Present',
     },
     {
       id: 'twitter-clone-nextjs',
@@ -293,7 +286,7 @@ export function getProjects(): Project[] {
         'Tailwind CSS',
       ],
       featured: true,
-      timeline: '2023'
+      timeline: '2023',
     },
     {
       id: 'twitter-clone-angular',
@@ -313,7 +306,7 @@ export function getProjects(): Project[] {
         'Redis',
       ],
       featured: true,
-      timeline: '2022'
+      timeline: '2022',
     },
     {
       id: 'express-folder-router',
@@ -326,7 +319,7 @@ export function getProjects(): Project[] {
         'A folder-based router solution for Express.js that automatically generates routes based on file structure.',
       technologies: ['Node.js', 'Express', 'JavaScript', 'NPM'],
       featured: false,
-      timeline: '2024'
+      timeline: '2024',
     },
     {
       id: 'health-care-app',
@@ -344,7 +337,7 @@ export function getProjects(): Project[] {
         'Material Design',
       ],
       featured: true,
-      timeline: '2021'
+      timeline: '2021',
     },
     {
       id: 'react-classname',
@@ -357,7 +350,7 @@ export function getProjects(): Project[] {
         'A simple React library that automatically uses classNames from CSS modules, simplifying styling workflows.',
       technologies: ['React', 'JavaScript', 'CSS Modules', 'NPM'],
       featured: false,
-      timeline: '2024'
+      timeline: '2024',
     },
     {
       id: 'messenger',
@@ -369,7 +362,7 @@ export function getProjects(): Project[] {
         'A real time end to end encrypted messaging app using java and android with firebase as a backend service.',
       technologies: ['Java', 'Android', 'Firebase', 'RSA'],
       featured: false,
-      timeline: '2022'
+      timeline: '2022',
     },
     {
       id: 'roll-the-dice',
@@ -381,7 +374,7 @@ export function getProjects(): Project[] {
         'An interactive dice rolling game with animations and score tracking, built with vanilla web technologies.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       featured: false,
-      timeline: '2023'
+      timeline: '2023',
     },
   ];
 }
