@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { useIntersectionObserver } from '../hooks/use-intersection-observer';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface RevealAnimationProps {
   children: ReactNode;
@@ -23,6 +24,10 @@ export default function RevealAnimation({
     rootMargin: '-50px',
   });
 
+  const isMobile = useIsMobile()
+
+  const fromOutside = isMobile && (direction == 'left' || direction == 'right')
+
   const getInitialTransform = () => {
     switch (direction) {
       case 'up':
@@ -40,8 +45,8 @@ export default function RevealAnimation({
     }
   };
 
-  return (
-    <div
+  if (!fromOutside) {
+    return <div
       ref={ref}
       className={className}
       style={{
@@ -51,6 +56,22 @@ export default function RevealAnimation({
       }}
     >
       {children}
+    </div>
+  }
+
+  return (
+    <div className={`overflow-hidden ${className}`}>
+      <div
+        ref={ref}
+        className={className}
+        style={{
+          opacity: isIntersecting ? 1 : 0,
+          transform: isIntersecting ? 'translate(0)' : getInitialTransform(),
+          transition: `all ${duration}ms cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}ms`,
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }

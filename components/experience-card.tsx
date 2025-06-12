@@ -1,10 +1,8 @@
-'use client';
-
 import { Calendar, ChevronDown, ChevronUp, Building } from 'lucide-react';
-import { useState } from 'react';
 import RevealAnimation from './reveal-animation';
 import GradientBackground from './gradient-background';
 import TechTag from './tech-tag';
+import { CardDescription } from './card-description';
 
 interface Experience {
   id: string;
@@ -28,7 +26,6 @@ export default function ExperienceCard({
   index,
   isEven,
 }: ExperienceCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
 
   const formatDate = (dateString: string) => {
     if (!dateString) return 'Present';
@@ -36,11 +33,6 @@ export default function ExperienceCard({
       year: 'numeric',
       month: 'short',
     });
-  };
-
-  const getShortDescription = (description: string, maxLength = 120) => {
-    if (description.length <= maxLength) return description;
-    return description.substring(0, maxLength).trim() + '...';
   };
 
   const getDuration = (startDate: string, endDate: string) => {
@@ -126,27 +118,7 @@ export default function ExperienceCard({
               </div>
 
               {/* Description */}
-              <div className="mb-4">
-                <p className="text-gray-300 leading-relaxed">
-                  {isExpanded
-                    ? experience.description
-                    : getShortDescription(experience.description)}
-                </p>
-
-                {experience.description.length > 120 && (
-                  <button
-                    onClick={() => setIsExpanded(!isExpanded)}
-                    className="mt-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-200 flex items-center group"
-                  >
-                    <span>{isExpanded ? 'Show Less' : 'Read More'}</span>
-                    {isExpanded ? (
-                      <ChevronUp className="w-4 h-4 ml-1 group-hover:-translate-y-0.5 transition-transform duration-200" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 ml-1 group-hover:translate-y-0.5 transition-transform duration-200" />
-                    )}
-                  </button>
-                )}
-              </div>
+              <CardDescription description={experience.description}/>
 
               {/* Technologies */}
               <div className="flex flex-wrap gap-2">
@@ -160,24 +132,6 @@ export default function ExperienceCard({
                 ))}
               </div>
 
-              {/* Additional Info (shown when expanded) */}
-              {isExpanded && (
-                <div className="mt-4 pt-4 border-t border-gray-700">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                    <div className="flex items-center text-gray-400">
-                      <Building className="w-4 h-4 mr-2" />
-                      <span>Company: {experience.companyName}</span>
-                    </div>
-                    <div className="flex items-center text-gray-400">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      <span>
-                        Duration:{' '}
-                        {getDuration(experience.startDate, experience.endDate)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Hover Effect */}

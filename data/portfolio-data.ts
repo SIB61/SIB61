@@ -20,6 +20,7 @@ export interface Project {
   description: string;
   technologies: string[];
   featured?: boolean;
+  timeline: string
 }
 
 export interface Article {
@@ -209,9 +210,77 @@ export function getExperiences(): Experience[] {
 export function getProjects(): Project[] {
   return [
     {
+      id: 'Kriyakarak',
+      title: 'Kriyakarak for Shellbeehaken Ltd.',
+      cover: '/kriyakarak.jpg',
+      link: 'https://www.kriyakarak.com/',
+      description: "KriyaKarak is a Bangladesh-based creative networking and hiring platform launched in 2024, designed for artists, designers, photographers, and service providers. It helps professionals showcase portfolios, manage bookings, and connect with clients across various categories like beauty, events, art, and consulting. Features include low commissions, verified profiles, NFC business cards, secure transactions, and global reach. Available on web, Android, and iOS.",
+      technologies: [
+        'Next.js',
+        'Express',
+        'MongoDB',
+        'Socket.IO',
+        'Redis',
+        'React',
+        'AWS',
+      ],
+      featured: true,
+      timeline: '2024 - 2025'
+    },
+    {
+      id: 'Mapage',
+      title: 'Mapage for Shellbeehaken Ltd.',
+      cover: '/mapage.jpg',
+      link: 'https://introduction.mapage.net/',
+      description: "Mapage is a web and mobile platform for beauty professionals, especially hairdressers, to create sleek, personalized websites in minutes. It offers templates co-designed with influencer stylists, Instagram integration, NFC digital business cards, online reservations, payments, and even e-commerce features. Stylists can manage schedules, clients, and services efficiently. Ideal for both individuals and salon teams, Mapage helps boost branding, streamline bookings, and enhance customer engagement—all from one easy-to-use platform.",
+      technologies: [
+        'Next.js',
+        'Express',
+        'MongoDB',
+        'Socket.IO',
+        'Redis',
+        'React',
+        'Tailwind CSS',
+      ],
+      featured: true,
+      timeline: '2023 - 2024'
+    },
+    {
+      id: 'Honnemir',
+      title: 'Honnemir for Shellbeehaken Ltd.',
+      cover: '/honnemir.jpg',
+      link: 'https://shellbeehaken.com/portfolio/5',
+      description: "The Honnemir User app, developed by ShellBeeHaken for Fujitsu, is a mobile platform designed to facilitate user participation in various surveys. Users can respond to a wide range of survey questions and enhance their responses by uploading videos and images. This interactive approach allows for more detailed and expressive feedback. The surveys are commissioned by different companies seeking to gather valuable insights and data. Through the Honnemir app, these companies can collect comprehensive responses that provide a deeper understanding of user opinions and behaviors .",
+      technologies: [
+        'Next.js',
+        'AWS Amplify',
+        'React',
+        'Tailwind CSS',
+      ],
+      featured: true,
+      timeline: '2023'
+    },
+    {
+      id: 'portfolio',
+      title: 'Portfolio',
+      cover: '/og-image.png?height=200&width=300',
+      link: '/',
+      githubLink: 'https://github.com/SIB61/Twitter-Clone',
+      description:
+        'A beautiful portfolio website to showcase my projects, articles, expericences and others in one place.',
+      technologies: [
+        'Next.js',
+        'React',
+        'Tailwind CSS',
+        'Shadcn'
+      ],
+      featured: true,
+      timeline: '2025 - Present'
+    },
+    {
       id: 'twitter-clone-nextjs',
       title: 'Twitter Clone (Next.js)',
-      cover: '/placeholder.svg?height=200&width=300',
+      cover: '/twitter-clone.jpg?height=200&width=300',
       link: 'https://www.youtube.com/watch?v=Vpre5X0EIoA',
       githubLink: 'https://github.com/SIB61/Twitter-Clone',
       description:
@@ -224,11 +293,12 @@ export function getProjects(): Project[] {
         'Tailwind CSS',
       ],
       featured: true,
+      timeline: '2023'
     },
     {
       id: 'twitter-clone-angular',
       title: 'Twitter Clone (Dotnet Core + Angular)',
-      cover: '/placeholder.svg?height=200&width=300',
+      cover: '/twitter-clone.jpg?height=200&width=300',
       link: 'https://www.youtube.com/watch?v=xHMAGtaW3CY',
       githubLink:
         'https://github.com/SIB61/Tweeter-clone-Learnathon-final-project-',
@@ -243,6 +313,7 @@ export function getProjects(): Project[] {
         'Redis',
       ],
       featured: true,
+      timeline: '2022'
     },
     {
       id: 'express-folder-router',
@@ -253,20 +324,9 @@ export function getProjects(): Project[] {
       githubLink: 'https://github.com/SIB61/express-folder-router',
       description:
         'A folder-based router solution for Express.js that automatically generates routes based on file structure.',
-      technologies: ['Node.js', 'Express.js', 'JavaScript', 'NPM'],
+      technologies: ['Node.js', 'Express', 'JavaScript', 'NPM'],
       featured: false,
-    },
-    {
-      id: 'react-classname',
-      title: 'React ClassName',
-      cover:
-        'https://th.bing.com/th/id/R.64bd21adf0efc47f19a6643516a23426?rik=XbxZLBVOeMaQkw&riu=http%3a%2f%2fanpsthemes.com%2fwp-content%2fuploads%2f2016%2f03%2fnpm-1.jpg&ehk=vsbtr9uLTdV5gUm%2fBaYlC%2fRvVG%2fgKX3j2XlZbJqWt28%3d&risl=&pid=ImgRaw&r=0',
-      link: 'https://www.npmjs.com/package/@sib61/react-classnames',
-      githubLink: 'https://github.com/SIB61/react-classnames',
-      description:
-        'A simple React library that automatically uses classNames from CSS modules, simplifying styling workflows.',
-      technologies: ['React', 'JavaScript', 'CSS Modules', 'NPM'],
-      featured: false,
+      timeline: '2024'
     },
     {
       id: 'health-care-app',
@@ -284,17 +344,20 @@ export function getProjects(): Project[] {
         'Material Design',
       ],
       featured: true,
+      timeline: '2021'
     },
     {
-      id: 'roll-the-dice',
-      title: 'Roll The Dice',
-      cover: '/roll-the-dice.png?height=200&width=300',
-      link: 'https://sib61.github.io/Roll-The-Dice/',
-      githubLink: 'https://github.com/SIB61/Roll-The-Dice',
+      id: 'react-classname',
+      title: 'React ClassName',
+      cover:
+        'https://th.bing.com/th/id/R.64bd21adf0efc47f19a6643516a23426?rik=XbxZLBVOeMaQkw&riu=http%3a%2f%2fanpsthemes.com%2fwp-content%2fuploads%2f2016%2f03%2fnpm-1.jpg&ehk=vsbtr9uLTdV5gUm%2fBaYlC%2fRvVG%2fgKX3j2XlZbJqWt28%3d&risl=&pid=ImgRaw&r=0',
+      link: 'https://www.npmjs.com/package/@sib61/react-classnames',
+      githubLink: 'https://github.com/SIB61/react-classnames',
       description:
-        'An interactive dice rolling game with animations and score tracking, built with vanilla web technologies.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+        'A simple React library that automatically uses classNames from CSS modules, simplifying styling workflows.',
+      technologies: ['React', 'JavaScript', 'CSS Modules', 'NPM'],
       featured: false,
+      timeline: '2024'
     },
     {
       id: 'messenger',
@@ -306,6 +369,19 @@ export function getProjects(): Project[] {
         'A real time end to end encrypted messaging app using java and android with firebase as a backend service.',
       technologies: ['Java', 'Android', 'Firebase', 'RSA'],
       featured: false,
+      timeline: '2022'
+    },
+    {
+      id: 'roll-the-dice',
+      title: 'Roll The Dice',
+      cover: '/roll-the-dice.png?height=200&width=300',
+      link: 'https://sib61.github.io/Roll-The-Dice/',
+      githubLink: 'https://github.com/SIB61/Roll-The-Dice',
+      description:
+        'An interactive dice rolling game with animations and score tracking, built with vanilla web technologies.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      featured: false,
+      timeline: '2023'
     },
   ];
 }

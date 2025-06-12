@@ -10,7 +10,7 @@ import {
 import RevealAnimation from './reveal-animation';
 import GradientBackground from './gradient-background';
 import { getPersonalInfo, getSocialLinks } from '../data/portfolio-data';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 import { useToast } from './ui/use-toast';
 import { toast } from 'sonner';
 
@@ -26,9 +26,11 @@ const FORM_FIELDS = {
 export default function Contact() {
   const personalInfo = getPersonalInfo();
   const socialLinks = getSocialLinks();
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    setIsLoading(true)
 
     console.log(e);
     const form = e.target as HTMLFormElement;
@@ -41,14 +43,19 @@ export default function Contact() {
         body: formData,
       }).then((res) => {
         form.reset();
+        setIsLoading(false)
         toast.success(
           `Thanks ${formData.get(FORM_FIELDS.name)}. I will get back to you ASAP`,
           { richColors: true }
         );
+      }).catch(e=>{
+        throw e
       });
     } catch (err) {
       console.error('Failed to send form', err);
+      setIsLoading(false)
     }
+
   };
 
   const iconMap = {
@@ -59,7 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 relative">
+    <section id="contact" className="pt-20 pb-10 px-4 relative">
       <div className="max-w-6xl mx-auto">
         <RevealAnimation direction="up">
           <div className="text-center mb-16">
@@ -203,19 +210,46 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-medium shadow-lg shadow-blue-500/25"
+                  disabled={isLoading}
+                  className={`w-full px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-blue-500/25`}
                 >
-                  Send Message
+                  {isLoading ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <svg
+                        className="animate-spin h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.372 0 0 5.372 0 12h4z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </div>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </GradientBackground>
           </RevealAnimation>
         </div>
 
-        <RevealAnimation direction="up" delay={600}>
-          <div className="mt-16 pt-8 border-t border-gray-800 text-center">
+        <RevealAnimation direction="up" delay={200}>
+          <div className="mt-16 pt-8 pb-10 border-t border-gray-800 text-center">
             <p className="text-gray-400">
-              © 2024 {personalInfo.name}. All rights reserved.
+              © 2025 {personalInfo.name}. All rights reserved.
             </p>
           </div>
         </RevealAnimation>

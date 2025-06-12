@@ -3,17 +3,8 @@
 import { ExternalLink, Github, Calendar, Star } from 'lucide-react';
 import GradientBackground from './gradient-background';
 import TechTag from './tech-tag';
+import { Project } from '@/data/portfolio-data';
 
-interface Project {
-  id: string;
-  title: string;
-  cover: string;
-  link: string;
-  githubLink?: string;
-  description: string;
-  technologies: string[];
-  featured?: boolean;
-}
 
 interface ProjectCardProps {
   project: Project;
@@ -136,11 +127,7 @@ export default function ProjectCard({
             <div className="flex items-center space-x-4">
               <div className="flex items-center">
                 <Calendar className="w-3 h-3 mr-1" />
-                <span>2024</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-1"></div>
-                <span>Active</span>
+                <span>{project.timeline}</span>
               </div>
             </div>
             <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors duration-200">

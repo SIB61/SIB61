@@ -1,5 +1,3 @@
-'use client';
-
 import {
   Github,
   Mail,
@@ -13,44 +11,11 @@ import { useState, useEffect } from 'react';
 import RevealAnimation from './reveal-animation';
 import GradientBackground from './gradient-background';
 import { getPersonalInfo, getSocialLinks } from '../data/portfolio-data';
+import { TypeWritter } from './typewritter';
 
 export default function Hero() {
   const personalInfo = getPersonalInfo();
   const socialLinks = getSocialLinks();
-  const [currentText, setCurrentText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const texts = [
-    'Software Engineer',
-    'Design Pattern Enthusiast',
-    'Fullstack Developer',
-    'Problem Solver',
-  ];
-
-  useEffect(() => {
-    const timeout = setTimeout(
-      () => {
-        const current = texts[currentIndex];
-
-        if (isDeleting) {
-          setCurrentText(current.substring(0, currentText.length - 1));
-        } else {
-          setCurrentText(current.substring(0, currentText.length + 1));
-        }
-
-        if (!isDeleting && currentText === current) {
-          setTimeout(() => setIsDeleting(true), 2000);
-        } else if (isDeleting && currentText === '') {
-          setIsDeleting(false);
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-        }
-      },
-      isDeleting ? 50 : 100
-    );
-
-    return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentIndex, texts]);
 
   const iconMap = {
     github: Github,
@@ -115,10 +80,7 @@ export default function Hero() {
 
         <RevealAnimation direction="up" delay={800}>
           <div className="mb-8">
-            <div className="text-2xl md:text-3xl text-gray-300 mb-4 font-medium h-12 flex items-center justify-center">
-              <span>{currentText}</span>
-              <span className="animate-pulse text-blue-400 ml-1">|</span>
-            </div>
+            <TypeWritter/>
             <div className="flex flex-wrap justify-center gap-3 mb-6">
               {[
                 'Design Patterns',
@@ -174,12 +136,8 @@ export default function Hero() {
 
         <RevealAnimation direction="up" delay={1400}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button
-              onClick={() =>
-                document
-                  .getElementById('contact')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
+            <a
+              href='/#contact'
               className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center">
@@ -187,21 +145,17 @@ export default function Hero() {
                 <Mail className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            </a>
 
-            <button
-              onClick={() =>
-                document
-                  .getElementById('projects')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
+            <a
+              href='/#projects'
               className="group px-8 py-4 border-2 border-gray-600 text-gray-300 rounded-xl hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300 font-medium backdrop-blur-sm hover:scale-105 relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center">
                 View My Work
                 <ArrowDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-200" />
               </span>
-            </button>
+            </a>
 
             <a
               href="https://www.dropbox.com/scl/fi/n1kcb7ad9nvi3icfj6tq8/Md-Sabit-Islam-Bhuiya-s-Resume.pdf?rlkey=8naozpv7un7awp807wnd5of5o&st=hgv8voo1&dl=1"

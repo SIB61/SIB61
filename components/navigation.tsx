@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const router = useRouter()
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -36,10 +38,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/#'+sectionId)
     setIsOpen(false);
   };
 
@@ -54,9 +53,9 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                href={`/#${item.id}`}
                 className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeSection === item.id
                     ? 'text-blue-400'
@@ -64,7 +63,7 @@ export default function Navigation() {
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
 
