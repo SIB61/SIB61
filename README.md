@@ -2,7 +2,7 @@
 
 ## 💫 About Me:
 
-🔭 Full stack software engineer at Shellbeehaken Ltd.<br>
+🔭 Full stack software engineer at JB Connect Ltd.<br>
 🌱 Current stack: NodeJS, Express, NextJs, MongoDb, Redis, SocketIO, AWS.<br>
 ⚡ Completed graduation in Software Engineering from Shahjalal University of Science and Technology, Sylhet, Bangladesh.<br>
 
