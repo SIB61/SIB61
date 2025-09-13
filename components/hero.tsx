@@ -7,11 +7,11 @@ import {
   ArrowDown,
   Linkedin,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
 import RevealAnimation from './reveal-animation';
 import GradientBackground from './gradient-background';
 import { getPersonalInfo, getSocialLinks } from '../data/portfolio-data';
 import { TypeWritter } from './typewritter';
+import Image from 'next/image';
 
 export default function Hero() {
   const personalInfo = getPersonalInfo();
@@ -51,7 +51,9 @@ export default function Hero() {
               {/* Animated ring around avatar */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 rounded-full animate-spin-slow opacity-75"></div>
               <div className="absolute inset-2 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50">
-                <img
+                <Image
+                  width={40*4}
+                  height={40*4}
                   src={personalInfo.image}
                   alt=""
                   className="w-full rounded-full h-full object-cover object-top"

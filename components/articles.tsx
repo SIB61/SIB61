@@ -8,11 +8,17 @@ import GradientBackground from './gradient-background';
 import { useResponsiveItems } from '../hooks/use-responsive-items';
 import { Article, getArticles } from '../data/portfolio-data';
 import ArticleCard from './article-card';
+import { useEffect, useState } from 'react';
 
-export default function Articles({ allArticles }: { allArticles: Article[] }) {
+export default function Articles() {
+  const [allArticles,setAllArticles] = useState<Article[]>([])
   const itemCount = useResponsiveItems({ mobileCount: 3, desktopCount: 6 });
   const displayedArticles = allArticles.slice(0, itemCount);
   const hasMoreArticles = allArticles.length > itemCount;
+
+  useEffect(()=>{
+    getArticles().then(articles=>setAllArticles(articles))
+  },[])
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
