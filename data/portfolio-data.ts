@@ -263,7 +263,7 @@ export function getProjects(): Project[] {
       title: 'Portfolio',
       cover: '/og-image.png?height=200&width=300',
       link: '/',
-      githubLink: 'https://github.com/SIB61/Twitter-Clone',
+      githubLink: 'https://github.com/SIB61/SIB61',
       description:
         'A beautiful portfolio website to showcase my projects, articles, expericences and others in one place.',
       technologies: ['Next.js', 'React', 'Tailwind CSS', 'Shadcn'],
