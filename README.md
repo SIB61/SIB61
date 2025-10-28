@@ -43,7 +43,7 @@ Android (Kotlin, Native)
 * Leading **DevOps initiatives** using **Docker**, **AWS ECS**, and **EC2**
 * Building scalable and maintainable system architectures
 
-### ⚙️ **Associate Software Engineer** • Shellbeehaken Ltd.
+### ⚙️ **Software Engineer** • Shellbeehaken Ltd.
 
 📅 *Aug 2023 – Mar 2025*
 
