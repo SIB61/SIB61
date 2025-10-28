@@ -4,9 +4,13 @@
 🎯 Passionate about building **scalable systems**, crafting **clean architecture**, and exploring **modern web technologies**.
 🎓 Software Engineering Graduate from **Shahjalal University of Science and Technology (SUST)**, Bangladesh — *2018–2023*
 
-📧 **[sib.sustswe@gmail.com](mailto:sib.sustswe@gmail.com)** | 📱 **+8801728212884**
 
 ---
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://sib61.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/sib61)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@sib.sustswe)
+[![StopStalk](https://img.shields.io/badge/StopStalk-0A66C2?style=flat&logo=codeforces&logoColor=white)](https://stopstalk.com/sib)
+[![Email](https://img.shields.io/badge/Email-sib.sustswe%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sib.sustswe@gmail.com)
 
 ## 🧠 Tech Stack
 
@@ -74,13 +78,18 @@ Android (Kotlin, Native)
 
 ## 🌐 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin\&logoColor=white)](https://linkedin.com/in/sib61)
-[![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium\&logoColor=white)](https://medium.com/@sib.sustswe)
-[![StopStalk](https://img.shields.io/badge/StopStalk-0A66C2?logo=codeforces\&logoColor=white)](https://stopstalk.com/sib)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://sib61.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/sib61)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@sib.sustswe)
+[![StopStalk](https://img.shields.io/badge/StopStalk-0A66C2?style=flat&logo=codeforces&logoColor=white)](https://stopstalk.com/sib)
+[![Email](https://img.shields.io/badge/Email-sib.sustswe%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sib.sustswe@gmail.com)
 
----
+
+
+</div>
+
+
 
 > 💡 *“Building scalable applications with clean architecture and modern web technologies.”*
 
----
 
