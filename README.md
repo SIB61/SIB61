@@ -57,9 +57,9 @@ Android (Kotlin, Native)
 
 ## 🏆 Achievements
 
-🥈 **2nd Place** – MIST Inter-University ICT Innovation Fest 2021
-🏅 **4th Place** – Learnathon 2022 (Geeky Solutions)
-🎖️ **7th Place** – Code Samurai 2022 *(Largest Hackathon in Bangladesh)*
+- 🥈 **2nd Place** – MIST Inter-University ICT Innovation Fest 2021
+- 🏅 **4th Place** – Learnathon 2022 (Geeky Solutions)
+- 🎖️ **7th Place** – Code Samurai 2022 *(Largest Hackathon in Bangladesh)*
 
 ---
 
