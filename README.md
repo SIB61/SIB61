@@ -84,6 +84,3 @@ Android (Kotlin, Native)
 
 ---
 
-Would you like me to make it **visually enhanced with custom GitHub badges, animated skill icons**, and a **dark/light mode optimized layout** (similar to top GitHub profiles like T3dotgg or midudev)?
-I can generate that next — it’ll look like a mini personal site right inside your README.
-
