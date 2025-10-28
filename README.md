@@ -1,9 +1,3 @@
-* ✨ **Visual design:** Better markdown layout and emojis for readability
-* 💬 **Language:** More concise and impactful phrasing
-* 📦 **Structure:** Cleaner section hierarchy and better use of visuals
-
----
-
 # 👋 Hi, I’m **Md Sabit Islam Bhuiya**
 
 **Software Engineer** at **JB Connect Ltd**
